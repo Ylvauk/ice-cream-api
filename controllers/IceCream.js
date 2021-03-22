@@ -16,7 +16,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
-router.get('/names/:flavor', (req, res) => {
+router.get('/flavors/:flavor', (req, res) => {
     IceCream.findOne({ flavor: req.params.flavor }).then(cone => {
         res.json(cone)
     })
